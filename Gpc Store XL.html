@@ -1,0 +1,1218 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TONNY STORE - Paket Data Spesial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+        }
+                /* Tambahkan style untuk background GIF */
+        body {
+            background: url('https://media1.tenor.com/m/AFbCquchaQAAAAAd/anime.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Membuat overlay transparan */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: -1;
+        }
+        .product-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.02);
+        }
+        .product-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .product-body {
+            padding: 20px;
+        }
+        .price-badge {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .feature-badge {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .area-details {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--secondary-color);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .accordion-button {
+            background-color: #f8f9fa;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #e9ecef;
+        }
+        
+        /* Floating OTP Login Styles */
+        .floating-otp-login {
+            position: fixed;
+            bottom: 105px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .otp-login-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+            color: white;
+            border-radius: 50px;
+            padding: 12px 25px;
+            box-shadow: 0 10px 20px rgba(255,71,87,0.3);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .otp-login-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(255,71,87,0.4);
+            color: white;
+        }
+        .otp-login-btn i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .otp-login-btn.pulse {
+            animation: pulse 2s infinite;
+        }
+        <!-- Tambahkan di dalam <style> yang ada -->
+    /* Style untuk modal kontak */
+    .contact-modal {
+        background: rgba(0,0,0,0.7);
+    }
+    .contact-modal-content {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        border-radius: 15px;
+    }
+    .floating-contact {
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .contact-btn {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+        border-radius: 50px;
+        padding: 12px 25px;
+        box-shadow: 0 10px 20px rgba(255,71,87,0.3);
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 25px rgba(255,71,87,0.4);
+        color: white;
+    }
+    .contact-btn i {
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    .contact-btn.pulse {
+        animation: pulse 2s infinite;
+    }
+    .whatsapp-contact-btn {
+        background: #25d366;
+    }
+    .telegram-contact-btn {
+        background: #0088cc;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Konten Utama dengan Desain Responsif -->
+<div class="container py-4 product-container text-white">
+    <div class="text-center mb-4">
+        <h1 class="display-6 fw-bold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+            <i class="fas fa-store text-warning"></i> TONNY STORE 
+            <span class="badge bg-danger">Promo Spesial Kemerdekaan🇲🇨</span>
+        </h1>
+        <p class="text-light opacity-75" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">
+            Paket Data Termurah & Terlengkap
+        </p>
+    </div>
+    
+
+        <!-- Accordion dengan produk (Sama seperti versi sebelumnya) -->
+        <div class="accordion" id="productAccordion">
+<!-- Reguler Data XL Mini -->
+<div class="accordion-item product-card">
+    <h2 class="accordion-header" id="headingRegular">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegular">
+            <i class="fas fa-mobile-alt me-2 text-primary"></i>  Reguler Data XL Mini
+        </button>
+    </h2>
+    <div id="collapseRegular" class="accordion-collapse collapse show" data-bs-parent="#productAccordion">
+        <div class="accordion-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Paket</th>
+                            <th>Kuota</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-mobile-alt text-primary me-2"></i>Reguler</td>
+                            <td>5 GB</td>
+                            <td>Rp 8.000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-mobile-alt text-primary me-2"></i>Reguler</td>
+                            <td>10 GB</td>
+                            <td>Rp 12.000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-mobile-alt text-primary me-2"></i>Reguler</td>
+                            <td>15 GB</td>
+                            <td>Rp 22.000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-mobile-alt text-primary me-2"></i>Reguler</td>
+                    <td>15 GB</td>
+                            <td>Rp 55.000</td>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tombol Beli -->
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="dropdown text-center">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="https://wa.me/+6285643838017?text=Apakah%20Paket%20Reguler%20masih%20tersedia?" target="_blank">
+                        <i class="fab fa-whatsapp text-success me-2"></i>WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://t.me/zixxi990" target="_blank">
+                        <i class="fab fa-telegram text-info me-2"></i>Telegram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                                <div class="alert alert-info mt-3">
+                        <h6 class="alert-heading"><i class="fas fa-info-circle"></i> Informasi Tambahan</h6>
+                        <ul class="list-unstyled small mb-0">
+                        <li class="mb-1">
+                                    <i class="fas fa-lock text me-2"></i> 
+                                    Pakai OTP
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-times-circle text-danger me-2"></i> 
+                                    No Refund / Garansi
+                                </li>
+                                <li class="mb-1">
+    <i class="fas fa-clock text-secondary me-2"></i> 
+    Aktif 30 Hari
+</li>
+                    </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reguler Official XL 30 Hari -->
+<div class="accordion-item product-card">
+    <h2 class="accordion-header" id="headingRegularOfficial">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegularOfficial">
+            <i class="fas fa-certificate me-2 text-warning"></i> Reguler Official XL
+        </button>
+    </h2>
+    <div id="collapseRegularOfficial" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+        <div class="accordion-body">
+            
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Paket</th>
+                <th>Kuota</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i class="fas fa-rocket text-primary me-2"></i>Reguler</td>
+                <td>5 GB</td>
+                <td>Rp 5.000</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-rocket text-primary me-2"></i>Reguler</td>
+                <td>10 GB</td>
+                <td>Rp 14.000</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-rocket text-primary me-2"></i>Reguler</td>
+                <td>15 GB</td>
+                <td>Rp 18.000</td>
+            </tr>
+            <tr>
+                <td><i class="fas fa-rocket text-primary me-2"></i>Reguler</td>
+                <td>18 GB</td>
+                <td>Rp 20.000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="alert alert-info mt-3">
+    <h6 class="alert-heading"><i class="fas fa-info-circle"></i> Informasi Tambahan</h6>
+    <ul class="list-unstyled small mb-0">
+        <li class="mb-1">
+            <i class="fas fa-lock text-success me-2"></i> 
+            Tanpa OTP
+        </li>
+        <li class="mb-1">
+            <i class="fas fa-times-circle text-danger me-2"></i> 
+            Tidak Support Masa Tenggang
+        </li>
+        <li>
+    <i class="fas fa-clock text-secondary me-2"></i> 
+    Aktif 30 Hari
+</li>
+    </ul>
+</div>
+
+            <!-- Beli Sekarang Reguler Official XL -->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="dropdown text-center">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="https://wa.me/+6285643838017?text=Apakah%20Paket%20Reguler%20Official%20XL%2030%20Hari%20masih%20tersedia?" target="_blank">
+                                    <i class="fab fa-whatsapp text-success me-2"></i>WhatsApp
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://t.me/zixxi990" target="_blank">
+                                    <i class="fab fa-telegram text-info me-2"></i>Telegram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Promo Akrab XL -->
+<div class="accordion-item product-card">
+    <h2 class="accordion-header" id="headingPromo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePromo">
+            <i class="fas fa-gift me-2 text-success"></i>  Promo Akrab XL
+        </button>
+    </h2>
+    <div id="collapsePromo" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+        <div class="accordion-body">
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle"></i> Resmi (Garansi 30 Hari)
+            </div>
+            
+            <div class="row">
+                <!-- Super Mini -->
+                <div class="col-md-6 mb-3">
+                    <div class="card border-primar">
+                        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                            Super Mini
+                            <span class="badge bg-light text-primary">Status : Ready ✅</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cek Untuk Area Kalian</h5>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-primary me-2"></i>Area 1</td>
+                                            <td>13 - 15 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-primary me-2"></i>Area 2</td>
+                                            <td>15 - 17 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-primary me-2"></i>Area 3</td>
+                                            <td>20 - 22 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-primary me-2"></i>Area 4</td>
+                                            <td>30 - 32 GB</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="badge bg-success">Harga: Rp 42.000</span>
+                                <span class="text-muted small"><i class="fas fa-clock me-1"></i>Aktif 30 Hari</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Small -->
+                <div class="col-md-6 mb-3">
+                    <div class="card border-success">
+                        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                            PAKET AKRAB L
+                            <span class="badge bg-light text-success">Area Spesial</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cek Untuk Area Kalian</h5>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-success me-2"></i>Area 1</td>
+                                            <td>38 - 40 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-success me-2"></i>Area 2</td>
+                                            <td>40 - 42 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-success me-2"></i>Area 3</td>
+                                            <td>45 - 47 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-success me-2"></i>Area 4</td>
+                                            <td>55 - 57 GB</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="badge bg-primary">Harga: Rp 56.000</span>
+                                <span class="text-muted small"><i class="fas fa-clock me-1"></i>Aktif 30 Hari</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Super Big -->
+<div class="col-md-6 mb-3">
+    <div class="card border-info">
+        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+            Akrab Mega L
+            <span class="badge bg-light text-info">Status : Ready</span>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Cek Untuk Area Kalian</h5>
+            <div class="table-responsive">
+                <table class="table table-sm table-borderless">
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-map-pin text-info me-2"></i>Area 1</td>
+                            <td>63 - 65 GB</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-map-pin text-info me-2"></i>Area 2</td>
+                            <td>65 - 67 GB</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-map-pin text-info me-2"></i>Area 3</td>
+                            <td>70 - 72 GB</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-map-pin text-info me-2"></i>Area 4</td>
+                            <td>80 - 82 GB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-warning">Harga: Rp 75.000</span>
+                <span class="text-muted small"><i class="fas fa-clock me-1"></i>Aktif 30 Hari</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Super Lite -->
+<div class="col-md-6 mb-3">
+    <div class="card border-secondary">
+        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+            Akrab Super Lite
+            <span class="badge bg-light text-secondary">Status : Ready</span>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Cek Untuk Area Kalian</h5>
+            <div class="table-responsive">
+                <table class="table table-sm table-borderless">
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-map-pin text-secondary me-2"></i>Area 1</td>
+                            <td>88 - 90 GB</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-map-pin text-secondary me-2"></i>Area 2</td>
+                            <td>90 - 92 GB</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-map-pin text-secondary me-2"></i>Area 3</td>
+                            <td>95 - 97 GB</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-map-pin text-secondary me-2"></i>Area 4</td>
+                            <td>105 - 107 GB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-primary">Harga: Rp 86.000</span>
+                <span class="text-muted small"><i class="fas fa-clock me-1"></i>Aktif 30 Hari</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!-- XL Reward -->
+                <div class="col-md-6 mb-3">
+                    <div class="card border-warning">
+                        <div class="card-header bg-warning text-white d-flex justify-content-between align-items-center">
+                            Paket Ultra
+                            <span class="badge bg-light text-warning">Area Spesial</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cek Untuk Area Kalian</h5>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-warning me-2"></i>Area 1</td>
+                                            <td>34.5 - 36.5 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-warning me-2"></i>Area 2</td>
+                                            <td>37.5 - 39.5 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-warning me-2"></i>Area 3</td>
+                                            <td>48 - 50 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-warning me-2"></i>Area 4</td>
+                                            <td>72 - 74 GB</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="badge bg-danger">Harga: Rp 60.000</span>
+                                <span class="text-muted small"><i class="fas fa-clock me-1"></i>Aktif 30 Hari</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XXL Reward -->
+                <div class="col-md-6 mb-3">
+                    <div class="card border-danger">
+                        <div class="card-header bg-danger text-white d-flex justify-content-between align-items-center">
+                            XXL Reward
+                            <span class="badge bg-light text-danger">Area Spesial</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cek Untuk Area Kalian</h5>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-borderless"> <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-danger me-2"></i>Area 1</td>
+                                            <td>45 - 47 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-danger me-2"></i>Area 2</td>
+                                            <td>50 - 52 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-danger me-2"></i>Area 3</td>
+                                            <td>70 - 72 GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-map-pin text-danger me-2"></i>Area 4</td>
+                                            <td>100 - 102 GB</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="badge bg-secondary">Harga: Rp 85.000</span>
+                                <span class="text-muted small"><i class="fas fa-clock me-1"></i>Aktif 30 Hari</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Untuk setiap paket, tambahkan dropdown yang sama -->
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="dropdown text-center">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="https://wa.me/+6285643838017?text=Apakah%20Paket%20Promo%20Akrab%20XL%20masih%20tersedia?" target="_blank">
+                        <i class="fab fa-whatsapp text-success me-2"></i>WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://t.me/zixxi990" target="_blank">
+                        <i class="fab fa-telegram text-info me-2"></i>Telegram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+            
+            <div class="alert alert-info mt-3 text-center">
+                <a href="https://cekareazixx.pages.dev/" target="_blank" class="btn btn-outline-primary btn-sm me-2">
+                    <i class="fas fa-map-marker-alt me-1"></i>Cek Area Lengkap
+                </a>
+                <span class="d-block mt-2">🌐 Berlaku untuk XL, Axis & Live On</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- X-tra Combo -->
+<div class="accordion-item product-card">
+    <h2 class="accordion-header" id="headingXtra">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseXtra">
+            <i class="fas fa-plus-circle me-2 text-info"></i>  X-tra Combo
+        </button>
+    </h2>
+    <div id="collapseXtra" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+        <div class="accordion-body">
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="card border-info">
+                        <div class="card-header bg-info text-white">
+                            <h5 class="mb-0">Flex S</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                • Kuota Utama: 1,5GB - 6,5GB<br>
+                                • WA/Line: 1,5GB
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Harga: Rp 20.000 (OTP)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card border-warning">
+                        <div class="card-header bg-warning text-white">
+                            <h5 class="mb-0">Plus 10GB</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                • Pakai OTP<br>
+                                • Bisa di Inject FUP 1TB
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Harga: Rp 75.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card border-success">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">VIP 5GB + 10GB</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                • No OTP (official)<br>
+                                • Bisa di Inject FUP 1TB
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Harga: Rp 75.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beli Sekarang X-tra Combo -->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="dropdown text-center">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="https://wa.me/+6285643838017?text=Apakah%20Paket%20X-tra%20Combo%20masih%20tersedia?" target="_blank">
+                                    <i class="fab fa-whatsapp text-success me-2"></i>WhatsApp
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://t.me/zixxi990" target="_blank">
+                                    <i class="fab fa-telegram text-info me-2"></i>Telegram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add On Xtra Combo -->
+<div class="accordion-item product-card">
+    <h2 class="accordion-header" id="headingAddOn">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAddOn">
+            <i class="fas fa-plus-square me-2 text-success"></i>  Add On Xtra Combo
+        </button>
+    </h2>
+    <div id="collapseAddOn" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+        <div class="accordion-body">
+            <div class="card">
+                <div class="card-header bg-warning text-white">
+                    <h5 class="mb-0">Add On Xtra Combo Plus/VIP Plus</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Layanan</th>
+                                            <th>7 GB</th>
+                                            <th>10 GB</th>
+                                            <th>15 GB</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fab fa-youtube text-danger me-2"></i>YouTube</td>
+                                            <td>Rp 2.000</td>
+                                            <td>-</td>
+                                            <td>Rp 8.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fab fa-whatsapp text-success me-2"></i>WhatsApp</td>
+                                            <td>-</td>
+                                            <td>Rp 5.000</td>
+                                            <td>Rp 5.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fab fa-tiktok text-dark me-2"></i>TikTok</td>
+                                            <td>-</td>
+                                            <td>Rp 8.000</td>
+                                            <td>Rp 8.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fab fa-facebook text-primary me-2"></i>Facebook</td>
+                                            <td>-</td>
+                                            <td>Rp 8.000</td>
+                                            <td>Rp 8.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fab fa-instagram text-danger me-2"></i>Instagram</td>
+                                            <td>-</td>
+                                            <td>Rp 8.000</td>
+                                            <td>Rp 8.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-3">
+    <div class="col-12">
+        <div class="dropdown text-center">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="https://wa.me/+6285643838017?text=Apakah%20Paket%20Add%20On%20Xtra%20Combo%20masih%20tersedia?" target="_blank">
+                        <i class="fab fa-whatsapp text-success me-2"></i>WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://t.me/zixxi990" target="_blank">
+                        <i class="fab fa-telegram text-info me-2"></i>Telegram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                    
+                    <div class="alert alert-info mt-3">
+                        <h6 class="alert-heading"><i class="fas fa-info-circle"></i> Informasi Tambahan</h6>
+                        <ul class="mb-0">
+                            <li>Pakai OTP untuk semua Add on</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Xtra Combo Special -->
+<div class="accordion-item product-card">
+    <h2 class="accordion-header" id="headingXtraSpecial">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseXtraSpecial">
+            <i class="fas fa-star me-2 text-warning"></i>  Xtra Combo Special
+        </button>
+    </h2>
+    <div id="collapseXtraSpecial" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+        <div class="accordion-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Paket</th>
+                            <th>Kuota</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-box text-primary me-2"></i>Combo Spesial</td>
+                            <td>8 GB</td>
+                            <td>Rp 25.000</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-box text-danger me-2"></i>Combo Spesial</td>
+                            <td>14 GB</td>
+                            <td>Rp 35.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+                    <div class="alert alert-info mt-3">
+                        <h6 class="alert-heading"><i class="fas fa-info-circle"></i> Informasi Tambahan</h6>
+                        <ul class="mb-0">
+                            <li>Pakai OTP</li>
+                            <li>Bisa Untuk Gandeng Add On My XL</li>
+                        </ul>
+                    </div>
+
+            <div class="card mt-3">
+                <div class="card-header bg-success text-white">Add On Xtra Combo Spesial</div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Jenis Add On</th>
+                                <th>Harga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fas fa-star text-warning me-2"></i>Add On XCS Basic</td>
+                                <td>Rp 1.000</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-star text-info me-2"></i>Add On XCS Standar</td>
+                                <td>Rp 3.500</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-star text-success me-2"></i>Add On XCS Super</td>
+                                <td>Rp 8.500</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-star text-primary me-2"></i>Add On XCS Premium</td>
+                                <td>Rp 15.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- Beli Sekarang Xtra Combo Spesial -->
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="dropdown text-center">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="https://wa.me/+6285643838017?text=Apakah%20Paket%20Xtra%20Combo%20Spesial%20/Addon%20Combo%20Spesialnya%20masih%20tersedia?" target="_blank">
+                        <i class="fab fa-whatsapp text-success me-2"></i>WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://t.me/zixxi990" target="_blank">
+                        <i class="fab fa-telegram text-info me-2"></i>Telegram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                    
+                                        <div class="alert alert-info mt-3">
+                        <h6 class="alert-heading"><i class="fas fa-info-circle"></i> Informasi Tambahan</h6>
+                        <ul class="mb-0">
+                            <li>Pakai OTP untuk semua Add on</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add On Xtra Combo Lite -->
+<div class="accordion-item product-card">
+    <h2 class="accordion-header" id="headingXtraLite">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseXtraLite">
+            <i class="fas fa-film me-2 text-info"></i>  Add On Xtra Combo Lite
+        </button>
+    </h2>
+    <div id="collapseXtraLite" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+        <div class="accordion-body">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Paket Streaming + Sosmed</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Platform Streaming</th>
+                                        <th>Platform Sosmed</th>
+                                        <th>Kuota</th>
+                                        <th>Harga</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="https://tse2.mm.bing.net/th?id=OIP.IYvcFaA6-V6W9JN40jeWFQHaHa&pid=Api&P=0&w=400&h=400" width="20" height="20" class="me-2"> 
+                                            Vidio
+                                        </td>
+                                        <td>
+                                            <i class="fab fa-facebook text-primary me-2"></i> 
+                                            <i class="fab fa-instagram text-warning me-2"></i>
+                                        </td>
+                                        <td>190 GB</td>
+                                        <td>Rp 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="https://www.viu.com/favicon.ico" width="20" height="20" class="me-2"> 
+                                            Viu
+                                        </td>
+                                        <td>
+                                            <i class="fab fa-facebook text-primary me-2"></i> 
+                                            <i class="fab fa-instagram text-warning me-2"></i>
+                                        </td>
+                                        <td>190 GB</td>
+                                        <td>Rp 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/02/iflix-logo.png" width="20" height="20" class="me-2"> 
+                                            Iflix
+                                        </td>
+                                        <td>
+                                            <i class="fab fa-facebook text-primary me-2"></i> 
+                                            <i class="fab fa-instagram text-warning me-2"></i>
+                                        </td>
+                                        <td>190 GB</td>
+                                        <td>Rp 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="https://www.netflix.com/favicon.ico" width="20" height="20" class="me-2"> 
+                                            Netflix
+                                        </td>
+                                        <td>
+                                            <i class="fab fa-facebook text-primary me-2"></i> 
+                                            <i class="fab fa-instagram text-warning me-2"></i>
+                                        </td>
+                                        <td>190 GB</td>
+                                        <td>Rp 15.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fab fa-youtube text-danger me-2"></i> 
+                                            YouTube
+                                        </td>
+                                        <td>
+                                            <i class="fab fa-facebook text-primary me-2"></i> 
+                                            <i class="fab fa-instagram text-warning me-2"></i>
+                                        </td>
+                                        <td>190 GB</td>
+                                        <td>Rp 15.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Beli Sekarang Add On Xtra Combo Lite -->
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="dropdown text-center">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-shopping-cart me-2"></i>Beli Sekarang
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="https://wa.me/+6285643838017?text=Apakah%20Paket%20Addon%20Combo%20Lite%20masih%20tersedia?" target="_blank">
+                        <i class="fab fa-whatsapp text-success me-2"></i>WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://t.me/zixxi990" target="_blank">
+                        <i class="fab fa-telegram text-info me-2"></i>Telegram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                
+                                    <div class="alert alert-info mt-3">
+                        <h6 class="alert-heading"><i class="fas fa-info-circle"></i> Informasi Tambahan</h6>
+                        <ul class="mb-0">
+                            <li>Menggunakan OTP</li>
+                            <li>Berlaku untuk Xtra Combo Lite</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Informasi Tambahan -->
+<!-- Perhatian Khusus Paket Non Official -->
+<div class="accordion-item product-card">
+    <h2 class="accordion-header" id="headingCaution">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCaution">
+            <i class="fas fa-exclamation-triangle text-danger me-2"></i> Perhatian Sebelum Membeli       </button>
+    </h2>
+    <div id="collapseCaution" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+        <div class="accordion-body">
+            <div class="card border-danger">
+                <div class="card-body">
+                    <div class="alert alert-danger p-2 text-center">
+                        <strong>ORDER = SETUJU</strong>
+                    </div>
+
+                    <div class="card bg-light mb-3">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-danger mb-2">
+                                <i class="fas fa-shield-alt me-2"></i> Risiko Pembegalan
+                            </h6>
+                            <ul class="list-unstyled small mb-0">
+                                <li class="mb-1">
+                                    <i class="fas fa-times-circle text-danger me-2"></i> 
+                                    NO REFUND/GARANSI
+                                </li>
+                                <li class="mb-1">
+                                    <i class="fas fa-info-circle text-warning me-2"></i> 
+                                    Paket tidak official (ordal/inject)
+                                </li>
+                                <li>
+                                    <i class="fas fa-exclamation-circle text-danger me-2"></i> 
+                                    Risiko ditanggung pembeli
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning py-2 px-3">
+                        <small>
+                            <i class="fas fa-check-circle me-2"></i> 
+                            Paket sejauh ini masih aman, masih bisa dipakai
+                        </small>
+                    </div>
+
+                    <div class="text-center">
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle me-2"></i> 
+                            Nikmati dan manfaatkan kuota sebaik mungkin
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Floating Login OTP Button -->
+    <div class="floating-otp-login">
+        <a href="https://otp.lanciaw.biz.id/" class="otp-login-btn pulse" target="_blank">
+            <i class="fas fa-key"></i> Login OTP
+        </a>
+    </div>
+
+<!-- Modal Kontak -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content contact-modal-content text-center">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title w-100" id="contactModalLabel">Pilih Metode Kontak</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="https://wa.me/+6285643838017" class="contact-btn whatsapp-contact-btn" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i> WhatsApp
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://t.me/zixxi990" class="contact-btn telegram-contact-btn" target="_blank">
+                            <i class="fab fa-telegram me-2"></i> Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tombol Hubungi Kami -->
+<div class="floating-contact">
+    <a href="#" class="contact-btn pulse" data-bs-toggle="modal" data-bs-target="#contactModal">
+        <i class="fas fa-headset"></i> Hubungi Kami
+    </a>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Tambahkan script untuk suara sad random -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Disable Right Click
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    }, false);
+
+    // Disable Text Selection
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+    }, false);
+
+    // Disable Copy
+    document.addEventListener('copy', function(e) {
+        e.preventDefault();
+    }, false);
+
+    // Disable View Source
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+            e.preventDefault();
+        }
+    }, false);
+
+    // Optional: Tambahkan pesan peringatan
+    console.log('%cPeringatan!', 'color: red; font-size: 24px;');
+    console.log('%cScript ini dilindungi dan tidak dapat disalin.', 'color: red;');
+});
+
+    // Daftar URL suara sad
+    const sadSounds = [
+        'https://pomf2.lain.la/f/wem1w285.mp3',
+        'https://pomf2.lain.la/f/so6k4z5e.mp3'
+    ];
+
+    // Fungsi untuk memutar suara acak dengan interaksi pengguna
+    function playSadSound() {
+        const randomSound = sadSounds[Math.floor(Math.random() * sadSounds.length)];
+        const audio = new Audio(randomSound);
+        audio.volume = 0.3; // Atur volume
+
+        // Gunakan metode play() dengan event listener
+        audio.play().catch(error => {
+            console.log('Autoplay blocked, waiting for user interaction');
+            
+            // Tambahkan event listener untuk memainkan suara saat ada interaksi pengguna
+            document.addEventListener('click', function playOnInteraction() {
+                audio.play().catch(err => console.log('Still cannot play:', err));
+                document.removeEventListener('click', playOnInteraction);
+            });
+        })
+    }
+
+    // Tambahkan event listener untuk memastikan audio dimulai setelah dokumen selesai dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+        // Coba putar suara
+        playSadSound();
+    });
+</script>
+</body>
+</html>
